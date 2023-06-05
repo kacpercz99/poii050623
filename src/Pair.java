@@ -1,12 +1,4 @@
-public class Pair {
-    int min;
-    int max;
-
-    public Pair(int min, int max) {
-        this.min = min;
-        this.max = max;
-    }
-
+public record Pair(Integer min, Integer max) {
     @Override
     public String toString() {
         return "Pair{" +

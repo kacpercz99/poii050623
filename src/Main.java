@@ -24,7 +24,7 @@ public class Main {
                 .flatMap(max -> list2.stream()
                         .filter(e -> e > max)
                         .findFirst())
-                .orElse(null);
+                .orElseThrow(MaxNotFoundException::new);
     }
     public static Pair zad4(List<Integer> list) {
         if(list == null || list.isEmpty()){
@@ -36,6 +36,6 @@ public class Main {
                 .flatMap(min -> list.stream()
                         .max(Integer::compareTo)
                         .map(max -> new Pair(min, max)))
-                .orElse(null);
+                .orElse(new Pair(1,-1));
     }
 }
