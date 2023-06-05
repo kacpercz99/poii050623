@@ -1,7 +1,5 @@
-import javax.naming.CannotProceedException;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +26,6 @@ public class Main {
                         .findFirst())
                 .orElse(null);
     }
-    //method that gets a list of integers and returns a Pair of min and max
     public static Pair zad4(List<Integer> list) {
         if(list == null || list.isEmpty()){
             throw new IllegalArgumentException();
